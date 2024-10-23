@@ -9,7 +9,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "org.assuremanager")
-@Import({WebConfig.class, JpaConfig.class, DataSourceConfig.class})
+@Import({WebConfig.class, JpaConfig.class})
 public class AppInitializer {
 
 

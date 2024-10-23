@@ -25,6 +25,21 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Contract> contracts;
 
+
+    public User(Long id, String name, String email, String password, String address, List<Contract> contracts, String phoneNumber) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.address = address;
+        this.contracts = contracts;
+        this.phoneNumber = phoneNumber;
+    }
+
+
+    public User() {
+
+    }
     public Long getId() {
         return id;
     }
@@ -81,6 +96,6 @@ public class User {
         this.contracts = contracts;
     }
 
-    // Getters and Setters
+
 }
 

@@ -1,11 +1,4 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
     <persistence-unit name="myJpaUnit">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>org.assuremanager.model.User</class>
-        <properties>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
-            <property name="hibernate.show_sql" value="true"/>
-        </properties>
     </persistence-unit>
 </persistence>
