@@ -162,7 +162,6 @@
 
         if (currentStep === totalSteps) {
             nextBtn.innerText = "Soumettre";
-            // simulatePrice(); // Calculate price at the last step
         }
 
         prevBtn.classList.remove("hidden");
@@ -190,15 +189,15 @@
         let typePrice = 0, riskPrice = 0, securityPrice = 0;
 
         if (propertyType === 'house') {
-            typePrice = 100; // example value
+            typePrice = 100;
         }
 
         if (riskZone === 'yes') {
-            riskPrice = 50; // example value
+            riskPrice = 50;
         }
 
         if (securitySystem === 'yes') {
-            securityPrice = -30; // example value (discount)
+            securityPrice = -30;
         }
 
         const basePrice = 300;

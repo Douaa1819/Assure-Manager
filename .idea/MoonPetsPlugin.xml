@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MoonPetsState">
+    <option name="backgroundConfig">
+      <PetUserBackgroundConfig>
+        <option name="backgroundCode" value="beach" />
+        <option name="system" value="true" />
+      </PetUserBackgroundConfig>
+    </option>
+  </component>
+</project>

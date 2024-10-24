@@ -58,23 +58,23 @@
     </div>
 </section>
 
-<!-- Call to Action -->
-<section class="bg-indigo-600 text-white py-16">
+
+<section class="bg-gray-800 text-white py-16">
     <div class="container mx-auto text-center">
         <h2 class="text-4xl font-bold mb-4">Ready to Protect What Matters Most?</h2>
         <p class="text-lg mb-8">Sign up today and discover the best insurance plans to suit your needs.</p>
-        <a href="/register" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-200">Join Us Now</a>
+        <a href="/register" class="bg-white text-gray-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-200">Join Us Now</a>
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-8">
+
+<footer class=" mx-15 bg-indigo-900 text-white py-8">
     <div class="container mx-auto text-center">
         <p>&copy; 2024 AssureManager. All Rights Reserved.</p>
         <div class="mt-4">
-            <a href="#" class="text-gray-400 hover:text-white px-2">Privacy Policy</a>
-            <a href="#" class="text-gray-400 hover:text-white px-2">Terms of Service</a>
-            <a href="#" class="text-gray-400 hover:text-white px-2">Contact Us</a>
+            <a href="#" class="text-indigo-400 hover:text-white px-2">Privacy Policy</a>
+            <a href="#" class="text-indigo-400 hover:text-white px-2">Terms of Service</a>
+            <a href="#" class="text-indigo-400 hover:text-white px-2">Contact Us</a>
         </div>
     </div>
 </footer>
