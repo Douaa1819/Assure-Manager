@@ -1,5 +1,9 @@
 package org.assuremanager.model;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
 import java.util.List;
 
 @Entity
@@ -10,15 +14,21 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Name cannot be blank")
     @Column(nullable = false)
     private String name;
 
+    @NotBlank(message = "email cannot be blank")
     @Column(nullable = false, unique = true)
     private String email;
 
+    @NotBlank(message = "Password cannot be blank")
+//    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).+$",
+//            message = "Password must contain at least one uppercase letter, one lowercase letter, one number and one special character")
     @Column(nullable = false)
     private String password;
 
+    @NotBlank(message = "Address cannot be blank")
     private String address;
     private String phoneNumber;
 
