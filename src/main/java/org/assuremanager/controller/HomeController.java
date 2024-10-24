@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/")
 public class HomeController {
 
-    @GetMapping("/home")
+    @GetMapping("/services")
     public ModelAndView home() {
         ModelAndView mav = new ModelAndView("home");
         mav.addObject("message", "Welcome to the Insurance Management System!");

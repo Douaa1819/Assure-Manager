@@ -44,12 +44,12 @@ public class UserController {
     public String loginUser(UserLoginRequest request) {
         try {
             if (userService.loginUser(request)) {
-                return "redirect:/home"; // Redirection après connexion réussie
+                return "redirect:/services";
             }
         } catch (InvalidCredentialsException e) {
-            return "redirect:/login?error"; // Redirection en cas d'échec
+            return "redirect:/login?error";
         }
-        return "redirect:/login?error"; // Redirection par défaut en cas d'échec
+        return "redirect:/login?error";
     }
 
     @GetMapping("/test")
