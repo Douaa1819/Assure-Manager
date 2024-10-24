@@ -52,6 +52,12 @@ public class UserController {
         return "redirect:/login?error";
     }
 
+
+    @PostMapping("/logout")
+    public String logout() {
+        return "redirect:/login?logout";
+    }
+
     @GetMapping("/test")
     public String test() {
         return "Test successful!";
