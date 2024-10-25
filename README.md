@@ -21,7 +21,7 @@ The **Insurance Contract Management Application** simplifies the process of mana
     git clone (https://github.com/Douaa1819/Assure-Manager.git)
     cd Assure-Manage
     ```
-2. **Configure the database** in `application.properties` and `package :config `:
+2. **Configure the database** in `application.properties` and `package :config `
 3. **Build and run the project**:
    
     ```bash
