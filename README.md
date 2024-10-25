@@ -21,21 +21,18 @@ The **Insurance Contract Management Application** simplifies the process of mana
     git clone (https://github.com/Douaa1819/Assure-Manager.git)
     cd Assure-Manage
     ```
-2. **Configure the database** in `application.properties`:
-    ```properties
-
-    ```
+2. **Configure the database** in `application.properties` and 'package :config ':
 3. **Build and run the project**:
+   
     ```bash
     mvn clean install
-    mvn spring-boot:run
     ```
 
 ## ✅ Usage
 - **Register** at `/register` and **login** at `/login`.
 - **Request quotes** for insurance.
 - **Subscribe to contracts** and upload documents.
-- **Manage your contracts** from the dashboard.
+- **Manage your contracts** from home page.
 
 ## 🧪 Testing
 Run unit tests with:
