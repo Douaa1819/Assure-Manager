@@ -49,7 +49,7 @@
         </div>
 
         <!-- Form Steps -->
-        <form id="insurance-form" class="space-y-6">
+        <form  action="/insurances/car" method="POST" id="insurance-form" class="space-y-6">
             <div id="step-1" class="step step-active">
                 <h3 class="text-xl font-bold text-gray-700 mb-4">Your Information</h3>
                 <div class="grid gap-4">
@@ -68,7 +68,7 @@
                 </div>
             </div>
 
-            <!-- Step 2: Car Insurance -->
+            <!--  Car Insurance -->
             <div id="step-2" class="step hidden">
 
                         <label class="block text-sm font-medium text-gray-700">Driver Age</label>
@@ -92,7 +92,7 @@
                 </div>
             </div>
 
-            <!-- Step 3: Home Insurance -->
+            <!--  Home Insurance -->
             <div id="step-3" class="step hidden">
                 <h3 class="text-xl font-bold text-gray-700 mb-4">Home Insurance</h3>
                 <div class="grid gap-4">
@@ -124,7 +124,7 @@
                 </div>
             </div>
 
-            <!-- Step 4: Your Simulation -->
+            <!--  Your Simulation -->
             <div id="step-4" class="step hidden">
                 <h3 class="text-xl font-bold text-gray-700 mb-4">Your Simulation</h3>
                 <div class="space-y-4">

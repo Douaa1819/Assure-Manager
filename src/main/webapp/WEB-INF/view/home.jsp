@@ -32,7 +32,7 @@
         <h2 class="text-4xl font-bold text-gray-800 mb-8">Select Your Insurance Service</h2>
         <div class="grid md:grid-cols-3 gap-8">
             <!-- Home Insurance -->
-            <a href="/services/home" class="block bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <a href="/insurances/home" class="block bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
                 <img src="https://st.depositphotos.com/1637787/2578/i/450/depositphotos_25784359-stock-photo-home-insurance-concept.jpg" alt="Home Insurance" class="w-full h-48 object-cover rounded-t-lg mb-4">
                 <h3 class="text-xl font-bold text-indigo-600 mb-2">Home Insurance</h3>
                 <p class="text-gray-700">Get comprehensive coverage for your home and belongings.</p>
@@ -41,7 +41,7 @@
 
 
             <!-- Car Insurance -->
-            <a href="/services/car" class="block bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <a href="/insurances/car" class="block bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
                 <img src="https://www.argusdelassurance.com/mediatheque/6/3/8/000161836_896x598_c.png" alt="Car Insurance" class="w-full h-48 object-cover rounded-t-lg mb-4">
                 <h3 class="text-xl font-bold text-indigo-600 mb-2">Car Insurance</h3>
                 <p class="text-gray-700">Protect your vehicle with our reliable car insurance plans.</p>
@@ -50,7 +50,7 @@
 
 
             <!-- Health Insurance -->
-            <a href="/services/health" class="block bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <a href="/insurances/health" class="block bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
                 <img src="https://mortgageadviceservices.co.uk/wp-content/uploads/2021/07/Depositphotos_222673112_s-2019.jpg" alt="Life Insurance" class="w-full h-48 object-cover rounded-t-lg mb-4">
                 <h3 class="text-xl font-bold text-indigo-600 mb-2">Health Insurance</h3>
                 <p class="text-gray-700">Secure your loved ones' future with our life insurance policies.</p>

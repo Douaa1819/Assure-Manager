@@ -50,7 +50,7 @@
         </div>
 
 
-        <form id="insurance-form" class="space-y-6">
+        <form  action="/insurances/health" method="POST" id="insurance-form" class="space-y-6">
 
             <div id="step-1" class="step step-active">
                 <h3 class="text-xl font-bold text-gray-700 mb-4">Vos Informations</h3>

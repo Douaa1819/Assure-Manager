@@ -9,4 +9,7 @@ public abstract class Insurance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long insuranceId;
+
+    public Insurance() {
+    }
 }

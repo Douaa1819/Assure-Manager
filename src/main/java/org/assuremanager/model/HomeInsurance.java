@@ -19,19 +19,21 @@ public class HomeInsurance extends Insurance {
 
     @NotBlank
     private String securitySystem;
-
+    private boolean risqueZone;
     @Enumerated(EnumType.STRING)
     private PropertyType propertyType;
 
-    private HomeInsurance() {
 
-    }
-
-    public HomeInsurance(Float propertyValue, String location, String securitySystem, PropertyType propertyType) {
+    public HomeInsurance(Float propertyValue, String location, String securitySystem, PropertyType propertyType, boolean risqueZone) {
         this.propertyValue = propertyValue;
         this.location = location;
         this.securitySystem = securitySystem;
         this.propertyType = propertyType;
+        this.risqueZone = risqueZone;
+    }
+
+    public HomeInsurance() {
+
     }
 
     public @NotBlank String getLocation() {
@@ -65,6 +67,14 @@ public class HomeInsurance extends Insurance {
     public void setPropertyType(PropertyType propertyType) {
         this.propertyType = propertyType;
     }
+
+    public boolean isRisqueZone() {
+        return risqueZone;
+    }
+    public void setRisqueZone(boolean risqueZone) {
+        this.risqueZone = risqueZone;
+    }
 }
+
 
 

@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMJHjWVj36eEjpGsW3j53H+1H7RzIqg7/5PzdJ" crossorigin="anonymous" />
     <title>Insurance Management - Sign In</title>
-
 </head>
 <body class="bg-gray-100">
 <div class="flex w-full max-w-md mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl mt-20">
     <div class="hidden bg-cover lg:block lg:w-1/2" style="background-image: url('https://aainform.co.za/wp-content/uploads/2023/05/vr-icons-illustrating-coverage-policy-insurance-family-life-travel-health-bank-house-scaled.jpg');"></div>
     <div class="w-full px-6 py-8 md:px-8 lg:w-1/2">
 
-        <h2 class="text-2xl font-bold text-center text-gray-700 dark:text-gray-200">Welcome Back!</h2>
+        <h2 class="text-2xl font-bold text-center text-gray-700 dark:text-gray-200">
+            <i class="fas fa-user-circle"></i> Welcome Back!
+        </h2>
 
         <div class="flex items-center justify-between mt-6">
             <span class="w-1/5 border-b dark:border-gray-600 lg:w-1/4"></span>
@@ -52,7 +54,6 @@
         </div>
     </div>
 </div>
-
 
 <script>
     function validateEmail(email) {

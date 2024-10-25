@@ -32,13 +32,13 @@
                 throw new EntityExistsException("User already exists with this email");
             }
 
-            User user = userMapper.toEntity(request); // Utilisez le mapper pour convertir en entité
-            user.setPassword(passwordEncoder.encode(request.getPassword()));// Hachage du mot de passe
+            User user = userMapper.toEntity(request);
+            user.setPassword(passwordEncoder.encode(request.getPassword()));
 
 
-            user = userRepository.save(user); // Enregistrement de l'utilisateur
+            user = userRepository.save(user);
 
-            return userMapper.toDto(user); // Retourne la réponse DTO
+            return userMapper.toDto(user);
         }
 
         public boolean loginUser(UserLoginRequest request) {
@@ -47,7 +47,6 @@
                 throw new InvalidCredentialsException("Invalid email or password");
             }
 
-            // Comparer le mot de passe haché avec le mot de passe fourni
             if (passwordEncoder.matches(request.getPassword(), user.getPassword())) {
                 return true;
             } else {
