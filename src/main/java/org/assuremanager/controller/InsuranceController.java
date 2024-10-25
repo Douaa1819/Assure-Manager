@@ -45,28 +45,26 @@ public class InsuranceController {
         return ResponseEntity.ok(responseDTO);
     }
 
+
+    @PostMapping("/car")
+    public ResponseEntity<CarInsuranceDto> createCarInsurance(@RequestBody CarInsuranceRequest dto) {
+        CarInsuranceDto responseDTO = insuranceService.addCarInsurance(dto);
+        return ResponseEntity.ok(responseDTO);
+    }
+
     @PostMapping("/home")
     public ModelAndView createHomeInsurance(
             @RequestParam("property_type") String propertyType,
             @RequestParam("property_value") Double propertyValue,
             @RequestParam("location") String location,
             @RequestParam("high_risk_zone") String highRiskZone,
-            @RequestParam("security-system") String securitySystem,
+            @RequestParam("security_system") String securitySystem,
             RedirectAttributes redirectAttributes
     ) {
-        ModelAndView modelAndView = new ModelAndView("services/home");
-
         try {
-            boolean isRisqueZone;
-            if ("yes".equalsIgnoreCase(highRiskZone)) {
-                isRisqueZone = true;
-            } else if ("no".equalsIgnoreCase(highRiskZone)) {
-                isRisqueZone = false;
-            } else {
-                redirectAttributes.addFlashAttribute("error", "Invalid value for high-risk zone. Use 'yes' or 'no'.");
-                return new ModelAndView("redirect:/insurances/home");
-            }
+            boolean isRisqueZone = "yes".equalsIgnoreCase(highRiskZone);
 
+            // Create a HomeInsuranceRequest object
             HomeInsuranceRequest request = new HomeInsuranceRequest();
             request.setPropertyType(PropertyType.valueOf(propertyType.toUpperCase()));
             request.setPropertyValue(propertyValue.floatValue());
@@ -74,23 +72,35 @@ public class InsuranceController {
             request.setSecuritySystem(securitySystem);
             request.setRisqueZone(isRisqueZone);
 
+            // Save the home insurance
             HomeInsuranceDto responseDTO = insuranceService.addHomeInsurance(request);
 
+            // Calculate the estimated
+            double estimatedCost = insuranceService.calculateHomeInsuranceCost(request);
+            redirectAttributes.addFlashAttribute("estimatedCost", estimatedCost);
             redirectAttributes.addFlashAttribute("success", "Home insurance created successfully!");
+
+            return new ModelAndView("redirect:services/homeInsurance");
+        } catch (IllegalArgumentException e) {
+            redirectAttributes.addFlashAttribute("error", "Invalid property type provided.");
+            return new ModelAndView("redirect:services/homeInsurance");
         } catch (Exception e) {
             redirectAttributes.addFlashAttribute("error", "An error occurred while creating home insurance.");
-            System.out.println("error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
+            return new ModelAndView("redirect:services/homeInsurance");
         }
-
-
-        return new ModelAndView("redirect:/insurances/home");
     }
 
-
-
-    @PostMapping("/car")
-    public ResponseEntity<CarInsuranceDto> createCarInsurance(@RequestBody CarInsuranceRequest dto) {
-        CarInsuranceDto responseDTO = insuranceService.addCarInsurance(dto);
-        return ResponseEntity.ok(responseDTO);
+    @GetMapping("/homeInsuranceEstimation")
+    public ModelAndView showHomeInsuranceEstimation(RedirectAttributes redirectAttributes) {
+        ModelAndView modelAndView = new ModelAndView("services/homeInsuranceEstimation");
+        Double estimatedCost = (Double) redirectAttributes.getFlashAttributes().get("estimatedCost");
+        modelAndView.addObject("estimatedCost", estimatedCost);
+        return modelAndView;
     }
 }
+
+
+
+
+

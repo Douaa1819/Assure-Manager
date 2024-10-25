@@ -53,9 +53,10 @@ public class UserController {
     }
 
 
-    @PostMapping("/logout")
-    public String logout() {
-        return "redirect:/login?logout";
+    @GetMapping("/logout")
+    public ModelAndView logout() {
+        ModelAndView modelAndView = new ModelAndView("/auth/login");
+        return modelAndView;
     }
 
     @GetMapping("/test")
