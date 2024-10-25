@@ -1,4 +1,4 @@
-package org.assuremanager.model;
+package org.assuremanager.enumeration;
 
 public enum InsuranceType {
     AUTOMOBILE,
