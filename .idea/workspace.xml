@@ -10,31 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fe1f27e-8201-4b47-bd6d-b95e84b3bb40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/controller/InsuranceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/dto/request/CarInsuranceRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/dto/request/HealthInsuranceRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/dto/request/HomeInsuranceRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/dto/response/CarInsuranceDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/dto/response/HealthInsuranceDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/dto/response/HomeInsuranceDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/mapper/InsuranceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/repository/CarInsuranceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/repository/HealthInsuranceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/repository/HomeInsuranceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/service/InsuranceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/assuremanager/controller/InsuranceServiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/assuremanager/dto/response/UserResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/dto/response/UserResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/assuremanager/model/HomeInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/model/HomeInsurance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/assuremanager/model/Insurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/model/Insurance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/assuremanager/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/auth/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/auth/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/auth/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/auth/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/services/carInsurance.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/services/carInsurance.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/services/healthInsurance.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/services/healthInsurance.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/assuremanager/controller/InsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/controller/InsuranceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/assuremanager/service/InsuranceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/assuremanager/service/InsuranceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/services/homeInsurance.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/services/homeInsurance.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +71,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 10.1.30.executor": "Run",
-    "git-widget-placeholder": "Insurance",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

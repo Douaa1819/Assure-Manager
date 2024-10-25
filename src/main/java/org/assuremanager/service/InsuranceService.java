@@ -9,7 +9,6 @@ import org.assuremanager.dto.response.HomeInsuranceDto;
 import org.assuremanager.enumeration.PropertyType;
 import org.assuremanager.mapper.InsuranceMapper;
 import org.assuremanager.model.CarInsurance;
-import org.assuremanager.model.Estimate;
 import org.assuremanager.model.HealthInsurance;
 import org.assuremanager.model.HomeInsurance;
 import org.assuremanager.repository.CarInsuranceRepository;
@@ -52,10 +51,10 @@ public class InsuranceService {
         return mapper.toResponseDTO(saved);
     }
 
-    private double calculateHomeInsuranceCost(HomeInsuranceRequest dto) {
+    public double calculateHomeInsuranceCost(HomeInsuranceRequest dto) {
         double basePrice = 300.0;
 
-        // +2 % si le bien est une maison
+        // +2 % si propoperty type est une maison
         if (dto.getPropertyType() == PropertyType.HOME) {
             basePrice += basePrice * 0.02;
         }

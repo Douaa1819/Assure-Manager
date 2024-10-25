@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -10,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-
         .hidden { display: none; }
         .step-active { display: block; }
         .section-title { color: #4c51bf; }
@@ -25,96 +23,86 @@
 %>
 
 <div class="container mx-auto">
-<c:if test="${not empty successMessage}">
+    <c:if test="${not empty successMessage}">
     <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
         <strong class="font-bold">Success!</strong>
         <span class="block sm:inline">${successMessage}</span>
     </div>
-</c:if>
+    </c:if>
 
-<c:if test="${not empty errorMessage}">
+    <c:if test="${not empty errorMessage}">
     <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
         <strong class="font-bold">Error!</strong>
         <span class="block sm:inline">${errorMessage}</span>
     </div>
-</c:if>
+    </c:if>
 
-<!-- Header -->
-<header class="bg-white shadow-md">
-    <div class="container mx-auto flex justify-between items-center py-4">
-        <a href="/" class="text-2xl font-bold text-indigo-600">AssureNow</a>
-        <nav>
-            <a href="/logout" class="text-gray-700 hover:text-indigo-600 px-4">Logout</a>
-        </nav>
-    </div>
-</header>
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center py-4">
+            <a href="/" class="text-2xl font-bold text-indigo-600">AssureNow</a>
+            <nav>
+                <a href="/logout" class="text-gray-700 hover:text-indigo-600 px-4">Logout</a>
+            </nav>
+        </div>
+    </header>
 
+    <section class="py-16">
+        <div class="container mx-auto bg-white p-8 rounded-lg shadow-lg max-w-4xl">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Home Insurance</h2>
 
-<section class="py-16">
-    <div class="container mx-auto bg-white p-8 rounded-lg shadow-lg max-w-4xl">
-        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Home Insurance</h2>
-
-        <div class="mb-8">
-            <h3 class="text-2xl font-bold section-title mb-4">Why choose this cover?</h3>
-            <div class="image-container mb-4">
-                <img src="https://aisins.ca/wp-content/uploads/2023/04/Home-Insurance.jpg" alt="Home Insurance" class="rounded-lg">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold section-title mb-4">Why choose this cover?</h3>
+                <div class="image-container mb-4">
+                    <img src="https://aisins.ca/wp-content/uploads/2023/04/Home-Insurance.jpg" alt="Home Insurance" class="rounded-lg">
+                </div>
+                <p class="text-gray-700 mb-4">
+                    Opting for our home insurance coverage gives you comprehensive protection for your property and valuable possessions. Whether it's damage caused by bad weather, theft or other unforeseen events, we have solutions to suit your needs.
+                </p>
             </div>
-            <p class="text-gray-700 mb-4 ">
-                Opting for our home insurance coverage gives you comprehensive protection for your property and valuable possessions. Whether it's damage caused by bad weather, theft or other unforeseen events, we have solutions to suit your needs.            </p>
-        </div>
 
+            <form action="/insurances/home" method="POST" id="insurance-form" class="space-y-6">
 
-        <div class="mb-8">
-            <ul class="flex justify-around">
-                <li class="step-title font-bold text-gray-600">Property</li>
-                <li class="step-title font-bold text-gray-600">Estimation</li>
-            </ul>
-        </div>
+                <input type="hidden" name="insurance_type" value="HABITATION">
 
-
-        <form action="/insurances/home" method="POST" id="insurance-form" class="space-y-6">
-
-            <input type="hidden" name="insurance_type" value="HABITATION">
-
-            <!--  Property Details -->
-            <div id="step-1" class="step">
-                <h3 class="text-xl font-bold text-gray-700 mb-4">Your Property</h3>
-                <div class="grid gap-4">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Property Type</label>
-                        <select name="property_type" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                            <option value="APARTMENT">Apartment</option>
-                            <option value="HOME">House</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Property Value (Base : 300 MAD)</label>
-                        <input type="number" name="property_value" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g. 200,000 USD" required>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Location</label>
-                        <input type="text" name="location" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="enter your location" required>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">High-Risk Zone</label>
-                        <select name="high_risk_zone" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Security System</label>
-                        <input name="security-system" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+                <!-- Property Details -->
+                <div id="step-1" class="step step-active">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">Your Property</h3>
+                    <div class="grid gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Property Type</label>
+                            <select name="property_type" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                                <option value="APARTMENT">Apartment</option>
+                                <option value="HOME">House</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Property Value (Base : 300 MAD)</label>
+                            <input type="number" name="property_value" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g. 200,000 USD" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Location</label>
+                            <input type="text" name="location" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" placeholder="enter your location" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">High-Risk Zone</label>
+                            <select name="high_risk_zone" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Security System</label>
+                            <input name="security-system" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="flex justify-between mt-4">
-                <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-lg">Next</button>
-            </div>
-        </form>
+                <div class="flex justify-between mt-4">
+                    <button type="button" id="next-step" class="bg-indigo-600 text-white px-6 py-2 rounded-lg">Next</button>
+                </div>
+            </form>
 
             <!-- Estimation -->
-            <form action="" method="post">
             <div id="step-2" class="step hidden">
                 <h3 class="text-xl font-bold text-gray-700 mb-4">Your Estimation</h3>
                 <div class="space-y-4">
@@ -135,10 +123,13 @@
                         <span>Total Estimated Price:</span> <span id="total-price"></span>
                     </div>
                 </div>
+                <div class="flex justify-between mt-4">
+                    <button type="button" id="accept-quote" class="bg-green-500 text-white px-6 py-2 rounded-lg">Accept Quote</button>
+                    <button type="button" id="back-to-step1" class="bg-red-500 text-white px-6 py-2 rounded-lg">Back</button>
+                </div>
             </div>
-            </form>
-            <!--  Contract Acceptance -->
-            <form action="" method="post">
+
+            <!-- Contract Acceptance -->
             <div id="step-3" class="step hidden">
                 <h3 class="text-xl font-bold text-gray-700 mb-4">Contract Details</h3>
                 <div class="grid gap-4">
@@ -156,25 +147,58 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Navigation Buttons -->
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 AssureNow. All rights reserved.</p>
+        </div>
+    </footer>
 
-        </form>
-    </div>
-</section>
+    <script>
+        document.getElementById('next-step').addEventListener('click', function () {
+            // Step 1 to Step 2
+            const propertyType = document.querySelector('[name="property_type"]').value;
+            const highRiskZone = document.querySelector('[name="high_risk_zone"]').value;
+            const securitySystem = document.querySelector('[name="security-system"]').value;
 
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto text-center">
-        <p>&copy; 2024 AssureNow. Tous droits réservés.</p>
-    </div>
-</footer>
+            let typePrice = 0;
+            if (propertyType === 'APARTMENT') typePrice = 100;
+            if (propertyType === 'HOME') typePrice = 200;
 
-<script>
+            let riskPrice = highRiskZone === 'yes' ? 150 : 0;
+            let securityPrice = securitySystem ? -50 : 0;
 
+            let totalPrice = 300 + typePrice + riskPrice + securityPrice;
 
+            document.getElementById('type-price').innerText = typePrice + ' USD';
+            document.getElementById('risk-price').innerText = riskPrice + ' USD';
+            document.getElementById('security-price').innerText = securityPrice + ' USD';
+            document.getElementById('total-price').innerText = totalPrice + ' USD';
 
-</script>
+            showStep(2);
+        });
+
+        document.getElementById('back-to-step1').addEventListener('click', function () {
+            showStep(1);
+        });
+
+        document.getElementById('accept-quote').addEventListener('click', function () {
+            showStep(3);
+        });
+
+        function showStep(step) {
+            const steps = document.querySelectorAll('.step');
+            steps.forEach((s) => s.classList.add('hidden'));
+            document.getElementById('step-' + step).classList.remove('hidden');
+        }
+
+        function goBackToEstimate() {
+            showStep(2);
+        }
+    </script>
 
 </body>
 </html>
